@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onRefresh() {
                 FetchData();
                 swipeRefreshLayout.setRefreshing(false);
-                //Toast.makeText(MainActivity.this, "Data refreshed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Data Updated!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -106,15 +106,14 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-//        lin_world_data.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Toast.makeText(MainActivity.this, "World data", Toast.LENGTH_SHORT).show();
-//                //Intent intent = new Intent(MainActivity.this, WorldDataActivity.class);
-//                //startActivity(intent);
-//                startActivity(new Intent(MainActivity.this, WorldDataActivity.class));
-//            }
-//        });
+        lin_world_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, WorldDataActivity.class);
+//                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, WorldDataActivity.class));
+            }
+        });
     }
 
 //    private void CheckForUpdate() {
