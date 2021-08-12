@@ -48,7 +48,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -207,7 +206,8 @@ public class MainActivity extends AppCompatActivity {
                             testData_jsonArray = response.getJSONArray("tested");
                             JSONObject data_india = all_state_jsonArray.getJSONObject(0);
                             JSONObject total_data = total_state_jsonArray.getJSONObject(total_state_jsonArray.length()-1);
-                            JSONObject test_data_india = testData_jsonArray.getJSONObject(testData_jsonArray.length()-1);
+                            JSONObject test_data_india = testData_jsonArray.getJSONObject(testData_jsonArray.length()-2);
+
 
                             //Fetching data for India and storing it in String
                             str_confirmed = data_india.getString("confirmed");   //Confirmed cases in India

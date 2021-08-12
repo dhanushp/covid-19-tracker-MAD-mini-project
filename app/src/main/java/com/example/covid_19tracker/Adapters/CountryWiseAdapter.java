@@ -39,6 +39,8 @@ import static com.example.covid_19tracker.Constants.COUNTRY_NEW_DECEASED;
 import static com.example.covid_19tracker.Constants.COUNTRY_RECOVERED;
 import static com.example.covid_19tracker.Constants.COUNTRY_TESTS;
 
+
+
 public class CountryWiseAdapter extends RecyclerView.Adapter<CountryWiseAdapter.MyViewHolder> {
     private Context mContext;
     private ArrayList<CountryWiseModel> countryWiseModelArrayList;
@@ -99,6 +101,8 @@ public class CountryWiseAdapter extends RecyclerView.Adapter<CountryWiseAdapter.
         }
 
         Glide.with(mContext).load(countryFlag).diskCacheStrategy(DiskCacheStrategy.DATA).into(holder.iv_flagImage);
+
+
         holder.lin_country.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

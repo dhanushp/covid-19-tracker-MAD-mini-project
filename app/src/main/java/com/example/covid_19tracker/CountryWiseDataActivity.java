@@ -103,7 +103,7 @@ public class CountryWiseDataActivity extends AppCompatActivity {
         activity.ShowDialog(this);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiURL = "https://corona.lmao.ninja/v2/countries";
+        String apiURL = "https://disease.sh/v3/covid-19/countries";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
                 apiURL,
