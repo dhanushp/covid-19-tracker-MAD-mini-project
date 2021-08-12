@@ -247,8 +247,21 @@ public class MainActivity extends AppCompatActivity {
                                     tv_death.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_death)));
                                     tv_death_new.setText("+"+NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_death_new)));
 
-                                    tv_tests.setText(NumberFormat.getInstance().format(Integer.parseInt(str_tests)));
-                                    tv_tests_new.setText("+"+NumberFormat.getInstance().format(Integer.parseInt(str_tests_new)));
+
+                                    if(str_tests.matches("")) {
+                                        tv_tests.setText("Data unavailable");
+                                    } else
+                                    {
+                                        tv_tests.setText(NumberFormat.getInstance().format(Integer.parseInt(str_tests)));
+                                    }
+
+                                    if(str_tests_new .matches("")) {
+                                        tv_tests_new.setText("Data unavailable");
+                                    } else
+                                    {
+                                        tv_tests_new.setText("+"+NumberFormat.getInstance().format(Integer.parseInt(str_tests_new)));
+                                    }
+
 
                                     tv_date.setText(FormatDate(str_last_update_time, 1));
                                     tv_time.setText(FormatDate(str_last_update_time, 2));
