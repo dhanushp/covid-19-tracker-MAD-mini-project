@@ -236,16 +236,23 @@ public class MainActivity extends AppCompatActivity {
                                     tv_confirmed_new.setText("+" + NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_confirmed_new)));
 
                                     tv_active.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_active)));
-
                                     int_active_new = Integer.parseInt(str_confirmed_new)
                                             - (Integer.parseInt(str_recovered_new) + Integer.parseInt(str_death_new));
-                                    tv_active_new.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(int_active_new));
+
+                                    if (int_active_new > 0) {
+                                        tv_active_new.setText("+" + NumberFormat.getInstance(new Locale("en", "IN")).format(int_active_new));
+                                    } else {
+                                        tv_active_new.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(int_active_new));
+                                    }
 
                                     tv_recovered.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_recovered)));
                                     tv_recovered_new.setText("+"+NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_recovered_new)));
 
                                     tv_death.setText(NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_death)));
                                     tv_death_new.setText("+"+NumberFormat.getInstance(new Locale("en", "IN")).format(Integer.parseInt(str_death_new)));
+
+
+
 
 
                                     if(str_tests.matches("")) {

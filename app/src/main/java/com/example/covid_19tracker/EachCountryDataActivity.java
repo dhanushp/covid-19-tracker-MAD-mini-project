@@ -112,6 +112,7 @@ public class EachCountryDataActivity extends AppCompatActivity {
         str_countryName = intent.getStringExtra(COUNTRY_NAME);
         str_confirmed = intent.getStringExtra(COUNTRY_CONFIRMED);
         str_active = intent.getStringExtra(COUNTRY_ACTIVE);
+        str_active_new = intent.getStringExtra(COUNTRY_NEW_CONFIRMED);
         str_death = intent.getStringExtra(COUNTRY_DECEASED);
         str_recovered = intent.getStringExtra(COUNTRY_RECOVERED);
         str_confirmed_new = intent.getStringExtra(COUNTRY_NEW_CONFIRMED);

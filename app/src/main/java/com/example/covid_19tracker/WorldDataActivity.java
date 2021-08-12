@@ -92,7 +92,7 @@ public class WorldDataActivity extends AppCompatActivity {
         activity.ShowDialog(this);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiUrl = "https://d isease.sh/v3/covid-19/all";
+        String apiUrl = "https://disease.sh/v3/covid-19/all";
         pieChart.clearChart();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
@@ -124,7 +124,12 @@ public class WorldDataActivity extends AppCompatActivity {
 
                                     int_active_new = Integer.parseInt(str_confirmed_new)
                                             - (Integer.parseInt(str_recovered_new) + Integer.parseInt(str_death_new));
-                                    tv_active_new.setText("+"+NumberFormat.getInstance().format(int_active_new));
+
+                                    if(int_active_new > 0) {
+                                        tv_active_new.setText("+"+NumberFormat.getInstance().format(int_active_new));
+                                    } else {
+                                        tv_active_new.setText(NumberFormat.getInstance().format(int_active_new));
+                                    }
 
                                     tv_recovered.setText(NumberFormat.getInstance().format(Integer.parseInt(str_recovered)));
                                     tv_recovered_new.setText("+"+NumberFormat.getInstance().format(Integer.parseInt(str_recovered_new)));
