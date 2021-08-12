@@ -92,7 +92,7 @@ public class WorldDataActivity extends AppCompatActivity {
         activity.ShowDialog(this);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiUrl = "https://disease.sh/v3/covid-19/all";
+        String apiUrl = "https://d isease.sh/v3/covid-19/all";
         pieChart.clearChart();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
