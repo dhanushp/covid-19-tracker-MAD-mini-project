@@ -53,7 +53,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     private String version;
-//  private FirebaseDatabase firebaseDatabase;
+    //  private FirebaseDatabase firebaseDatabase;
 //  private DatabaseReference databaseReference;
     private String appUrl;
     private TextView tv_confirmed, tv_confirmed_new, tv_active, tv_active_new, tv_recovered, tv_recovered_new, tv_death,
@@ -98,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        lin_state_data.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Toast.makeText(MainActivity.this, "State data", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(MainActivity.this, StateWiseDataActivity.class));
-//            }
-//        });
+        lin_state_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(MainActivity.this, "State data", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, StateWiseDataActivity.class));
+            }
+        });
 
         lin_world_data.setOnClickListener(new View.OnClickListener() {
             @Override
