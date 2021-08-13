@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".EachDistrictDataActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DistrictWiseDataActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EachStateDataActivity"
+            android:exported="true" />
+        <activity
             android:name=".StateWiseDataActivity"
             android:exported="true" />
         <activity
@@ -21,7 +30,8 @@
         <activity
             android:name=".WorldDataActivity"
             android:exported="true" />
-        <activity android:name=".EachCountryDataActivity"
+        <activity
+            android:name=".EachCountryDataActivity"
             android:exported="true" />
         <activity android:name=".MainActivity">
             <intent-filter>
