@@ -112,7 +112,7 @@ public class DistrictWiseDataActivity extends AppCompatActivity {
         activity.ShowDialog(this);
 
         final RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiURL = "https://api.covid19india.org/v2/state_district_wise.json";
+        String apiURL = "https://data.covid19india.org/v2/state_district_wise.json";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,

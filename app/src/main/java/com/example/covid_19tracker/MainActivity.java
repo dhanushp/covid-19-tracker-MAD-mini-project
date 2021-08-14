@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         ShowDialog(this);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiUrl = "https://api.covid19india.org/data.json";
+        String apiUrl = "https://data.covid19india.org/data.json";
 
         pieChart.clearChart();
 

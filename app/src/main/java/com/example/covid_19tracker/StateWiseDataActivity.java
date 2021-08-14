@@ -94,7 +94,7 @@ public class StateWiseDataActivity extends AppCompatActivity {
         activity.ShowDialog(this);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String apiURL = "https://api.covid19india.org/data.json";
+        String apiURL = "https://data.covid19india.org/data.json";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
