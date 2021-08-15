@@ -1,8 +1,6 @@
 package com.example.covid_19tracker;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -18,7 +16,6 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +25,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.database.DataSnapshot;
@@ -82,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Check app update in Firebase
-//        CheckForUpdate();
+        CheckForUpdate();
 
         //setting up the titlebar text
         getSupportActionBar().setTitle("Covid-19 Tracker (India)");
@@ -120,69 +116,69 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    private void CheckForUpdate() {
-//        try{
-//            version = this.getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-//
-//            firebaseDatabase = FirebaseDatabase.getInstance();
-//            databaseReference = firebaseDatabase.getReference("Version").child("versionNumber");
-//            databaseReference.addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                    String versionName = (String) dataSnapshot.getValue();
-//
-//                    if(!versionName.equals(version)){
-//                        //Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-//
-//                        androidx.appcompat.app.AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
-//                                .setTitle("New Version Available!")
-//                                .setMessage("Please update our app to the latest version for continuous use.")
-//                                .setPositiveButton("UPDATE", new DialogInterface.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(DialogInterface dialog, int which) {
-//                                        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Version").child("appUrl");
-//                                        myRef.addValueEventListener(new ValueEventListener() {
-//                                            @Override
-//                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                                                appUrl = dataSnapshot.getValue().toString();
-//                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(appUrl)));
-//                                                finish();
-//                                            }
-//
-//                                            @Override
-//                                            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                                            }
-//                                        });
-//                                    }
-//                                })
-//                                .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(DialogInterface dialog, int which) {
-//                                        finish();
-//                                    }
-//                                })
-//                                .create();
-//
-//                        alertDialog.setCancelable(false);
-//                        alertDialog.setCanceledOnTouchOutside(false);
-//
-//                        alertDialog.show();
-//                    }
-//
-//
-//                }
-//
-//                @Override
-//                public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                }
-//            });
-//
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//    }
+    private void CheckForUpdate() {
+        try{
+            version = this.getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+
+            firebaseDatabase = FirebaseDatabase.getInstance();
+            databaseReference = firebaseDatabase.getReference("Version").child("versionNumber");
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    String versionName = (String) dataSnapshot.getValue();
+
+                    if(!versionName.equals(version)){
+                        //Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+
+                        androidx.appcompat.app.AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
+                                .setTitle("New Version Available!")
+                                .setMessage("Please update our app to the latest version for continuous use.")
+                                .setPositiveButton("UPDATE", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Version").child("appUrl");
+                                        myRef.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                appUrl = dataSnapshot.getValue().toString();
+                                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(appUrl)));
+                                                finish();
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                            }
+                                        });
+                                    }
+                                })
+                                .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        finish();
+                                    }
+                                })
+                                .create();
+
+                        alertDialog.setCancelable(false);
+                        alertDialog.setCanceledOnTouchOutside(false);
+
+                        alertDialog.show();
+                    }
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     private void FetchData() {
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Covid19Tracker</string>
+    <string name="app_name">Covid19 Tracker</string>
 
     <!--Credits only-->
     <string name="credits">\u2022 <b>covid19india.org</b> for India specific API.

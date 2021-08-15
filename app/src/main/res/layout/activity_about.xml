@@ -76,7 +76,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:onClick="openGit"
-                            android:src="@drawable/github" />
+                            android:src="@drawable/github"
+                            android:contentDescription="TODO" />
 
                     </LinearLayout>
 

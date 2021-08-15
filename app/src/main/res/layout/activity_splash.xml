@@ -20,7 +20,8 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/title_tv"

@@ -12,7 +12,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,14 +39,6 @@ public class SplashActivity extends AppCompatActivity {
 
         CheckForUpdate();
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        }, SPLASH_SCREEN_TIMEOUT);
     }
 
     private void CheckForUpdate() {
