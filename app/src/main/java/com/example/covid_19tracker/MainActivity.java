@@ -31,6 +31,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 //import com.google.firebase.database.DataSnapshot;
 //import com.google.firebase.database.DatabaseError;
 //import com.google.firebase.database.DatabaseReference;
@@ -52,8 +57,8 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private String version;
-    //  private FirebaseDatabase firebaseDatabase;
-//  private DatabaseReference databaseReference;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
     private String appUrl;
     private TextView tv_confirmed, tv_confirmed_new, tv_active, tv_active_new, tv_recovered, tv_recovered_new, tv_death,
             tv_death_new, tv_tests, tv_tests_new, tv_date, tv_time;
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Check app update in Firebase
-//      CheckForUpdate();
+//        CheckForUpdate();
 
         //setting up the titlebar text
         getSupportActionBar().setTitle("Covid-19 Tracker (India)");
@@ -164,6 +169,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //                        alertDialog.show();
 //                    }
+//
+//
 //                }
 //
 //                @Override

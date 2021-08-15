@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1015133424218",
-    "project_id": "coivid-19-tracker",
-    "storage_bucket": "coivid-19-tracker.appspot.com"
+    "project_number": "690019437051",
+    "project_id": "covid19-tracker-b8b56",
+    "storage_bucket": "covid19-tracker-b8b56.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1015133424218:android:f16c96969153d3fd7f6663",
+        "mobilesdk_app_id": "1:690019437051:android:e9cabc58792b3ddb2a235e",
         "android_client_info": {
           "package_name": "com.example.covid_19tracker"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1015133424218-g31eq95kvdq1tjntaequ93hobr1aeshp.apps.googleusercontent.com",
+          "client_id": "690019437051-ehol6ondflj2tvipc137bddg7qd7fu91.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC-ww3rwQS_phcI7QJ9uZG0kzeEonHH7xw"
+          "current_key": "AIzaSyC_OKYEmAie3v6RO8MFkaRQot2MwxDjJZU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1015133424218-g31eq95kvdq1tjntaequ93hobr1aeshp.apps.googleusercontent.com",
+              "client_id": "690019437051-ehol6ondflj2tvipc137bddg7qd7fu91.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
