@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="30dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/about_cv"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
@@ -31,59 +32,169 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-<!--                    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--                        android:id="@+id/profile_image"-->
-<!--                        android:layout_width="83dp"-->
-<!--                        android:layout_height="81dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_marginTop="10dp"-->
-<!--&lt;!&ndash;                        android:src="@drawable/my_image"&ndash;&gt;-->
-<!--                        app:civ_border_color="#fff"-->
-<!--                        app:civ_border_width="0.7dp" />-->
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:gravity="center"
-                        android:text="Dhanush P"
-                        android:textColor="#fff"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:text="4SF18CS192"
-                        android:textColor="#c4c4c4"
-                        android:textSize="15sp" />
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginBottom="25sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/github"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:onClick="openGit"
-                            android:src="@drawable/github"
-                            android:contentDescription="TODO" />
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/dhanush_image"
+                            android:layout_width="110dp"
+                            android:layout_height="114dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/dhanush" />
 
+                        <LinearLayout
+                            android:layout_width="229dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="Dhanush P"
+                                android:textColor="#fff"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="4SF18CS192"
+                                android:textColor="#c4c4c4"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:id="@+id/github"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:onClick="openGit"
+                                    android:src="@drawable/ic_github" />
+
+                                <ImageView
+                                    android:id="@+id/insta"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:onClick="openInsta"
+                                    android:src="@drawable/ic_insta"
+                                    android:layout_marginLeft="30dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
+
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_cv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:elevation="20dp"
+                android:padding="20dp"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/sebastian_image"
+                            android:layout_width="110dp"
+                            android:layout_height="114dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sebastian" />
+
+                        <LinearLayout
+                            android:layout_width="229dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="Sebastian Thattil"
+                                android:textColor="#fff"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="4SF18CS128"
+                                android:textColor="#c4c4c4"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
 
 
+                                <ImageView
+                                    android:id="@+id/github2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:onClick="openGit2"
+                                    android:src="@drawable/ic_github" />
+
+                                <ImageView
+                                    android:id="@+id/insta2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:onClick="openInsta2"
+                                    android:src="@drawable/ic_insta"
+                                    android:layout_marginLeft="30dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -134,11 +245,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Version: v1.0.0"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="5dp"
+        android:text="@string/version"
+        android:textColor="#000000"
+        android:textSize="12sp" />
 
 </RelativeLayout>

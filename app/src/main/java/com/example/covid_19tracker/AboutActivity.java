@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +20,7 @@ public class AboutActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("About");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 
     @Override
@@ -29,6 +31,18 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     public void openGit(View view) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.github.com/codewithshubh")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.github.com/dhanushp")));
+    }
+
+    public void openInsta(View view) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/dhanush_bangera/")));
+    }
+
+    public void openGit2(View view) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sebpool47")));
+    }
+
+    public void openInsta2(View view) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/zer0_.deaths/")));
     }
 }
